@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator Project</title>
+
+</head>
+<body>
+  <script>
+    var firstNumber = Number(prompt('Enter Your First Number...'));
+    var secondNumber = Number(prompt('Enter Your Second Number...'));
+    var operation = Number(prompt("Choose an operation:\n1. Addition\n2. Subtraction\n3. Multiplication\n4. Division"));
+    var result;
+
+    switch(operation) {
+      case 1:
+        result = firstNumber + secondNumber;
+        break;
+      case 2:
+        result = firstNumber - secondNumber;
+        break;
+      case 3:
+        result = firstNumber * secondNumber;
+        break;
+      case 4:
+        result = firstNumber / secondNumber;
+        break; 
+    }
+    alert("Result: " + result);
+  </script>
+</body>
+</html>
