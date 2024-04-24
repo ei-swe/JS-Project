@@ -25,13 +25,15 @@
                 alert("Please enter a valid amount between 0 and 500.");
             }
 
+            var guessNumber = Number(prompt("Guess a Number between 1 and 100"));
             var luckyNumber = 20;
-            var newBalance = balance + playAmount;
+            var newBalance;
 
-            if (luckyNumber === 20) {
+            if (luckyNumber === guessNumber) {
+                newBalance = balance + playAmount;
                 alert("Congratulations! You won! Your lucky number was " + luckyNumber + ". Your balance is now: " + newBalance);
             } else {
-                newBalance -= playAmount;
+                newBalance = balance - playAmount;
                 alert("Sorry, you lost. Your lucky number was " + luckyNumber + ". Your balance is now: " + newBalance);
             }
             balance = newBalance;
