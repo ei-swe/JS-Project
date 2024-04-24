@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+</head>
+
+<body>
+
+    <script>
+        var balance = 500;
+
+        function startGame() {
+            alert("Your balance is :" + balance);
+            play();
+
+        }
+
+        function play() {
+            var playAmount = Number(prompt("Enter the amount you want to play with Min: 0 to Max: 500"));
+
+            if (playAmount < 0 || playAmount > 500) {
+                alert("Please enter a valid amount between 0 and 500.");
+            }
+
+            var luckyNumber = 20;
+            var newBalance = balance + playAmount;
+
+            if (luckyNumber === 20) {
+                alert("Congratulations! You won! Your lucky number was " + luckyNumber + ". Your balance is now: " + newBalance);
+            } else {
+                newBalance -= playAmount;
+                alert("Sorry, you lost. Your lucky number was " + luckyNumber + ". Your balance is now: " + newBalance);
+            }
+            balance = newBalance;
+
+            var choice = Number(prompt("Do you want to play again?\n1:Restart\n2: Stop"));
+
+            if (choice === 1) {
+                play();
+            } else if (choice == 2) {
+                alert("Thanks for playing! Your final balance is: " + balance);
+            } else {
+                alert("Game stopped. Your final balance is: " + balance);
+            }
+
+        }
+        startGame();
+
+
+    </script>
+</body>
+
+</html>
