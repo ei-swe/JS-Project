@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+</head>
+<style>
+    .container {
+        margin: auto;
+    }
+
+    h2 {
+        color: #2629e6;
+    }
+
+    .card {
+        width: 500px;
+        height: 75vh;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: aliceblue;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
+    #input-description {
+        width: 60%;
+        padding: 10px 2%;
+        background-color: #fff;
+        border: none;
+        box-shadow: 1px 5px 10px -5px rgba(0, 0, 0, 0.5);
+        outline: none;
+    }
+
+    button {
+        padding: 10px 20px;
+        background-color: #4C75A1;
+        border: none;
+        margin: 10px auto;
+        box-shadow: 1px 5px 10px -5px rgba(0, 0, 0, 0.5);
+        color: #fff;
+        cursor: pointer;
+    }
+
+    ul li {
+        list-style: none;
+        font-size: 18px;
+        padding: 0;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <h2>To Do List</h2>
+            <div class="list">
+                <input type="text" id="input-description" placeholder="Enter a task...">
+                <button id="add-task">Add Task</button>
+                <ul id="task-list"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('add-task').addEventListener('click', function () {
+            var description = document.getElementById('input-description').value;
+
+            var listItem = document.createElement('li');
+            listItem.textContent = description;
+
+            document.getElementById('task-list').appendChild(listItem);
+
+            document.getElementById('input-description').value = '';
+        });
+    </script>
+</body>
+
+</html>
