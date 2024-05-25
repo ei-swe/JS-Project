@@ -1,0 +1,54 @@
+body {
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    height          : 100vh;
+    margin          : 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display         : flex;
+    width           : 200px;
+    height          : 500px;
+    border          : 2px solid #333;
+    background-color: #ddd;
+    position        : relative;
+}
+
+.floor-step {
+    flex    : 1;
+    display : flex;
+    position: relative;
+}
+
+.floor-line {
+    width           : 100%;
+    height          : 2px;
+    background-color: #000;
+    position        : absolute;
+    left            : 0;
+}
+
+.elevator {
+    width           : 100%;
+    height          : 20%;
+    background-color: #666;
+    position        : absolute;
+    bottom          : 0;
+    transition      : bottom 2s;
+}
+
+.controls {
+    margin-left: 20px;
+}
+
+button {
+    display  : flex;
+    margin   : 10px 0;
+    padding  : 10px 20px;
+    font-size: 16px;
+    bottom   : 0;
+    right    : 0;
+
+}
